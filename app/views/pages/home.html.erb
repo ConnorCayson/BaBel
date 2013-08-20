@@ -1,14 +1,18 @@
-<div class="center hero-unit">
+<% if user_signed_in? %>
+ You are Logged in!
+<% else %>
+   <div class="center hero-unit">
 	
-	<h1>Welcome to BaBel</h1>
+	 <h1>Welcome to BaBel</h1>
 	
-	<p>
-	  A lounge for sophisticated connectivity.
-    </p>
+	 <p>
+	   A lounge for sophisticated connectivity.
+     </p>
 
 
-	<p>
-      <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
-    </p>
+	 <p>
+       <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+     </p>
 
 </div>
+<% end %>
